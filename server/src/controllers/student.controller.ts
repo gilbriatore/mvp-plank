@@ -11,7 +11,6 @@ const createSchema = z.object({
     email: z.email().max(160)
 });
 
-
 export async function list(req: Request, res: Response){
     const page = Math.max(1, Number(req.query.page) || 1);
     const size = Math.min(50, Math.max(1, Number(req.query.size) || 10));
